@@ -24,6 +24,10 @@ Tutorial - Java Application Performance and Memory Management - from Matt Greenc
    - `0` - no compilation
    - `1...4` - deeper level of compilation
 
+####  Logging Diagnostic
 
+1. Unlock diagnostic and logging to file
+   - `java -XX:+UnlockDiagnosticVMOptions -XX:+LogCompilation net.shyshkin.study.performance.perf01.Main 5000`
+   - view `hotspot_pid9860.log`
 
 
