@@ -24,10 +24,28 @@ Tutorial - Java Application Performance and Memory Management - from Matt Greenc
    - `0` - no compilation
    - `1...4` - deeper level of compilation
 
-####  Logging Diagnostic
+####  10. Logging Diagnostic
 
 1. Unlock diagnostic and logging to file
    - `java -XX:+UnlockDiagnosticVMOptions -XX:+LogCompilation net.shyshkin.study.performance.perf01.Main 5000`
    - view `hotspot_pid9860.log`
 
+####  11. Tuning the code cache size
+
+1. View CodeCache
+   - `java -XX:+PrintCodeCache net.shyshkin.study.performance.perf01.Main 5000`
+   - but I did not see `CodeCache` 
+   - `CodeHeap 'non-profiled nmethods': size=120000Kb used=26Kb max_used=26Kb free=119973Kb`
+   - `CodeHeap 'profiled nmethods': size=120000Kb used=135Kb max_used=135Kb free=119864Kb`
+   - `CodeHeap 'non-nmethods': size=5760Kb used=996Kb max_used=1009Kb free=4764Kb`
+   - `total_blobs=335 nmethods=96 adapters=151`
+2. Change CodeCache size
+   - `InitialCodeCacheSize` - min
+   - `ReservedCodeCacheSize` - max
+   - `CodeCacheExpansionSize` - step of changing size
+   - `java -XX:ReservedCodeCacheSize=28m -XX:+PrintCodeCache net.shyshkin.study.performance.perf01.Main 5000`
+   - I saw
+   - `CodeCache: size=28672Kb used=1163Kb max_used=1176Kb free=27509Kb`
+   - `total_blobs=339 nmethods=100 adapters=151`
+     
 
