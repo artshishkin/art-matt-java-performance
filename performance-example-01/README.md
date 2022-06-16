@@ -48,4 +48,16 @@ Tutorial - Java Application Performance and Memory Management - from Matt Greenc
    - `CodeCache: size=28672Kb used=1163Kb max_used=1176Kb free=27509Kb`
    - `total_blobs=339 nmethods=100 adapters=151`
      
+####  12. Remotely monitoring the code cache with JConsole
+
+1. Start JConsole
+   - `jconsole`
+   - Local Process
+   - ensure enough permissions for folder
+     - `c:\Users\Admin\AppData\Local\Temp\hsperfdata_Admin\` for everyone to write
+2. Connect to process
+   - IntelliJ for example
+3. Run our modified code and connect to it through JConsole
+   - `java -XX:+PrintCompilation net.shyshkin.study.performance.perf01.Main 5000`
+   - view that our process uses additional memory for connection with JConsole 
 
