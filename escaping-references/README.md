@@ -7,3 +7,9 @@
 
 1. No impact on the performance 
 2. Can still provide unexpected behaviour (we can delete item)
+
+#### 30. Strategy 2 - duplicating collections
+
+1. Has **small** impact on the performance
+2. We can still modify objects
+
