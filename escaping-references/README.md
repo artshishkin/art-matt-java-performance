@@ -24,6 +24,10 @@
 1. Escaping is success
 2. Not an elegant because user might think he is using original object. And when he tries to modify it nothing happens
 
+#### 33. Strategy 5 - using interfaces to create immutable objects
+
+1. Escaping is success
+
 
 
 
