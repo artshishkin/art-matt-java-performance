@@ -1,6 +1,8 @@
 # performance-example-01
 Tutorial - Java Application Performance and Memory Management - from Matt Greencroft (Udemy)
 
+###  Section 2: Chapter 2 - Just In Time Compilation and the Code Cache
+
 ####  Run App
 
 1. from target/classes run:
@@ -61,3 +63,20 @@ Tutorial - Java Application Performance and Memory Management - from Matt Greenc
    - `java -XX:+PrintCompilation net.shyshkin.study.performance.perf01.Main 5000`
    - view that our process uses additional memory for connection with JConsole 
 
+###  Section 3: Chapter 3 - Selecting the JVM
+
+#### 14. Specifying which compiler to use at runtime
+
+1. Compilers
+   - c1 - client
+   - c2 - server
+2. According to JVM
+   - 32 bit - c1 only
+   - 64 bit - both c1 and c2 present
+3. Specify client compiler only
+   - add flag `-client`
+   - `java -XX:+PrintCompilation  net.shyshkin.study.performance.perf01.Main 15000`
+   - took 7372 ms (Matt had ~3500)
+   - `java -XX:+PrintCompilation -client net.shyshkin.study.performance.perf01.Main 15000`
+   - took 7355 ms (Matt had ~2300)
+   - no benefit for me
