@@ -19,7 +19,10 @@
 2. Produce UnsupportedOperationException when trying to modify collection
 3. We can still modify objects
 
+#### 32. Strategy 4 - duplicating objects
 
+1. Escaping is success
+2. Not an elegant because user might think he is using original object. And when he tries to modify it nothing happens
 
 
 

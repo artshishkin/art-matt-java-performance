@@ -15,6 +15,10 @@ public class Customer {
         this.name = name;
     }
 
+    public Customer(Customer original) {
+        this.name = original.name;
+    }
+
     public String toString() {
         return name;
     }
