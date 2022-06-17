@@ -32,5 +32,5 @@
 
 #### 34. Strategy 6 - using modules to hide the implementation
 
-
+#### 35. Strategy 7 - using package-private class to hide the implementation
 
