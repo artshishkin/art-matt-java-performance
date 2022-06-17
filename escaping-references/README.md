@@ -27,6 +27,7 @@
 #### 33. Strategy 5 - using interfaces to create immutable objects
 
 1. Escaping is success
+2. Another problem - casting
 
 
 

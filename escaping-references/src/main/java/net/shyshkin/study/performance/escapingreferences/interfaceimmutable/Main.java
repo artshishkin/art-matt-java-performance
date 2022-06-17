@@ -14,6 +14,13 @@ public class Main {
 
         //Problem absent - can not set name
 //        records.find("John").setName("Buzz");
+
+        //Another problem
+        ReadOnlyCustomer readOnlyJohn = records.find("John");
+        Customer castedJohn = (Customer) readOnlyJohn;
+        castedJohn.setName("Foo");
+        records.getCustomers().values().forEach(System.out::println);
+
     }
 
 }
