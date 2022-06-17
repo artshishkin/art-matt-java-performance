@@ -15,7 +15,7 @@ public class Main {
         //Problem absent - can not set name
 //        records.find("John").setName("Buzz");
 
-        //Another problem
+        //Another problem - fixed
         ReadOnlyCustomer readOnlyJohn = records.find("John");
         Customer castedJohn = (Customer) readOnlyJohn;
         castedJohn.setName("Foo");

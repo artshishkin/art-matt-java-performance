@@ -19,7 +19,10 @@ public class CustomerRecords {
     }
 
     public ReadOnlyCustomer find(String name) {
-        return records.get(name);
+        Customer original = records.get(name);
+        return (original == null) ?
+                null :
+                new Customer(original);
     }
 
 }

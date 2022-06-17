@@ -28,6 +28,7 @@
 
 1. Escaping is success
 2. Another problem - casting
+3. Fixing by combining interface and object duplicating
 
 
 

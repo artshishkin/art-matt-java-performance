@@ -16,6 +16,10 @@ public class Customer implements ReadOnlyCustomer {
         this.name = name;
     }
 
+    public Customer(Customer original) {
+        this.name = original.name;
+    }
+
     @Override
     public String toString() {
         return name;
