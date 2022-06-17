@@ -20,6 +20,7 @@
     <modules>
         <module>performance-example-01</module>
         <module>exploring-memory</module>
+        <module>escaping-references</module>
     </modules>
 
 </project>
