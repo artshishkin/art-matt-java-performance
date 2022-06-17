@@ -13,3 +13,14 @@
 1. Has **small** impact on the performance
 2. We can still modify objects
 
+#### 31. Strategy 3 - using immutable collections
+
+1. Has **small** impact on the performance
+2. Produce UnsupportedOperationException when trying to modify collection
+3. We can still modify objects
+
+
+
+
+
+
