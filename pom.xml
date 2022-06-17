@@ -21,6 +21,7 @@
         <module>performance-example-01</module>
         <module>exploring-memory</module>
         <module>escaping-references</module>
+        <module>escaping-references-customer-module</module>
     </modules>
 
 </project>

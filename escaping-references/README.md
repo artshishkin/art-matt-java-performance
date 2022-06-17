@@ -30,6 +30,7 @@
 2. Another problem - casting
 3. Fixing by combining interface and object duplicating
 
+#### 34. Strategy 6 - using modules to hide the implementation
 
 
 
