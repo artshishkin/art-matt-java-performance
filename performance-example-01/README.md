@@ -80,3 +80,20 @@ Tutorial - Java Application Performance and Memory Management - from Matt Greenc
    - `java -XX:+PrintCompilation -client net.shyshkin.study.performance.perf01.Main 15000`
    - took 7355 ms (Matt had ~2300)
    - no benefit for me
+
+#### 15. Turning off tiered compilation
+
+1. May be useful
+   - when using only interpretation is acceptable
+   - for *Serverless* Applications
+   - for *one-line-of-code* applications
+2. Turning off tiered compilation
+   - `-XX:-TieredCompilation`
+
+
+
+
+
+
+
+
