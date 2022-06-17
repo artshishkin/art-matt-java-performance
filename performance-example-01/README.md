@@ -90,10 +90,22 @@ Tutorial - Java Application Performance and Memory Management - from Matt Greenc
 2. Turning off tiered compilation
    - `-XX:-TieredCompilation`
 
+####  16. Tuning native compilation within the Virtual Machine
 
-
-
-
-
+1. View All the flags
+   - `java -XX:+PrintFlagsFinal`
+2. Find threads count for compiler
+   - `CICompilerCount` - 4 for my machine
+3. View certain flag
+   - `jps` - view any java running application - get process id - 724
+   - `jinfo -flag CICompilerCount 724` - 2 (for IntelliJ - it starts with this flag set)
+4. Set CICompilerCount
+   - `java -XX:+PrintCompilation -XX:CICompilerCount=8 net.shyshkin.study.performance.perf01.Main 15000`
+5. Flag `CompileThreshold`
+   - number of times method has to be run before compile happened
+   - `java -XX:+PrintFlagsFinal` - CompileThreshold = 10000
+   - `jinfo -flag CompileThreshold 724` - -XX:CompileThreshold=10000
+6. Set CompileThreshold
+   - `java -XX:+PrintCompilation -XX:CompileThreshold=1000 net.shyshkin.study.performance.perf01.Main 15000`
 
 
