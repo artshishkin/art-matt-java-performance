@@ -8,5 +8,6 @@ Tutorial - Java Application Performance and Memory Management - from Matt Greenc
 - [Section 3: Chapter 3 - Selecting the JVM](performance-example-01/README.md#section-3-chapter-3---selecting-the-jvm)
 - Section 4: Chapter 4 - How memory works - the stack and the heap
 - [Section 5: Chapter 5 - Passing objects between methods](exploring-memory/README.md)
+- Section 6: Chapter 6 - Memory exercise 1
 
 [licence]: https://img.shields.io/github/license/artshishkin/art-matt-java-performance.svg
