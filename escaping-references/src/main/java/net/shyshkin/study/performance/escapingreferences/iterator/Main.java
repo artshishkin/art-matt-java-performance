@@ -2,6 +2,8 @@ package net.shyshkin.study.performance.escapingreferences.iterator;
 
 import net.shyshkin.study.performance.escapingreferences.Customer;
 
+import java.util.Iterator;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -11,16 +13,19 @@ public class Main {
         records.addCustomer(new Customer("Simon"));
 
         //Expected usage
-//        records.iterator()
-//                .forEachRemaining(System.out::println);
-// OR
         for (Customer next : records) {
             System.out.println(next);
         }
 
-        //Problem solved - can not do like this
-//        Map<String, Customer> myCustomers = records.getCustomers();
-//        myCustomers.clear(); //we do not want to allow this behaviour
+        Iterator<Customer> iterator = records.iterator();
+        iterator.next();
+        iterator.remove(); //we can remove object from a collection
+
+        System.out.println("------after another brake------");
+
+        for (Customer next : records) {
+            System.out.println(next);
+        }
 
     }
 

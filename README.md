@@ -9,6 +9,6 @@ Tutorial - Java Application Performance and Memory Management - from Matt Greenc
 - Section 4: Chapter 4 - How memory works - the stack and the heap
 - [Section 5: Chapter 5 - Passing objects between methods](exploring-memory/README.md)
 - Section 6: Chapter 6 - Memory exercise 1
-- Section 7: Chapter 7 - Escaping References
+- [Section 7: Chapter 7 - Escaping References](escaping-references/README.md)
 
 [licence]: https://img.shields.io/github/license/artshishkin/art-matt-java-performance.svg
