@@ -1,6 +1,4 @@
-package net.shyshkin.study.performance.escapingreferences.duplicating;
-
-import net.shyshkin.study.performance.escapingreferences.Customer;
+package net.shyshkin.study.performance.escapingreferences.duplicatingobjects;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,6 +15,11 @@ public class CustomerRecords {
     }
 
     public Map<String, Customer> getCustomers() {
-        return new HashMap<>(this.records);
+        return Map.copyOf(this.records);
     }
+
+    public Customer find(String name) {
+        return records.get(name);
+    }
+
 }

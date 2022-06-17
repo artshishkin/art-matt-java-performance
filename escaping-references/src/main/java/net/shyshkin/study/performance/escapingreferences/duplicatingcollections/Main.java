@@ -1,4 +1,4 @@
-package net.shyshkin.study.performance.escapingreferences.duplicating;
+package net.shyshkin.study.performance.escapingreferences.duplicatingcollections;
 
 import net.shyshkin.study.performance.escapingreferences.Customer;
 
