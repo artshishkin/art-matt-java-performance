@@ -42,5 +42,24 @@ Interning - putting String into the String Pool in Heap
    - `Std. dev. of bucket size:     6.494`
    - `Maximum bucket size     :        35`
 
+#### 44. Tuning the size of the string pool
+
+1. Use flag `StringTableSize`
+   - must be the Prime number
+   - `java -XX:StringTableSize=120121 -XX:+PrintStringTableStatistics net.shyshkin.study.performance.exploringstrings.ManyStrings`
+2. Result
+   - `StringTable statistics:`
+   - `Number of buckets       :   1048576 =   8388608 bytes, each 8`
+   - `Number of entries       :  10002368 = 160037888 bytes, each 16`
+   - `Number of literals      :  10002368 = 480149592 bytes, avg  48.004`
+   - `Total footprsize_t         :           = 648576088 bytes`
+   - `Average bucket size     :     9.539`
+   - `Variance of bucket size :    42.171`
+   - `Std. dev. of bucket size:     6.494`
+   - `Maximum bucket size     :        35`
+3. Bucket size enlarged automatically ???
+
+
+
 
    
