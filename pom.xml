@@ -22,6 +22,7 @@
         <module>exploring-memory</module>
         <module>escaping-references</module>
         <module>escaping-references-customer-module</module>
+        <module>exploring-strings</module>
     </modules>
 
 </project>
