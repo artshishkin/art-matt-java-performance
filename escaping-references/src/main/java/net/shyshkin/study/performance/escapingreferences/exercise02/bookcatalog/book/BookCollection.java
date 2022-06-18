@@ -1,4 +1,4 @@
-package net.shyshkin.study.performance.escapingreferences.exercise02.bookcatalog;
+package net.shyshkin.study.performance.escapingreferences.exercise02.bookcatalog.book;
 
 import java.util.ArrayList;
 import java.util.List;

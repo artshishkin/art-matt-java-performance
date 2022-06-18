@@ -1,6 +1,6 @@
-package net.shyshkin.study.performance.escapingreferences.exercise02.bookcatalog;
+package net.shyshkin.study.performance.escapingreferences.exercise02.bookcatalog.book;
 
-public class Book implements ReadOnlyBook {
+class Book implements ReadOnlyBook {
     private int id;
     private String title;
     private String author;
