@@ -1,4 +1,4 @@
-package net.shyshkin.study.performance.exploringstrings;
+package net.shyshkin.study.performance.exploringstrings.pool;
 
 public class Main {
 

@@ -11,5 +11,7 @@ Tutorial - Java Application Performance and Memory Management - from Matt Greenc
 - Section 6: Chapter 6 - Memory exercise 1
 - [Section 7: Chapter 7 - Escaping References](escaping-references/README.md)
 - Section 8: Chapter 8 - Memory Exercise 2
+- [Section 9: Chapter 9 - The Metaspace and internal JVM memory optimisations](exploring-strings/README.md)
+- [Section 10: Chapter 10 - Tuning the JVM's Memory Settings](exploring-strings/README.md#section-10-chapter-10---tuning-the-jvms-memory-settings)
 
 [licence]: https://img.shields.io/github/license/artshishkin/art-matt-java-performance.svg
