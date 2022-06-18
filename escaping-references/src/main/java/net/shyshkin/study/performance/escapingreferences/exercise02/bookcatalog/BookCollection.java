@@ -24,7 +24,7 @@ public class BookCollection {
 	public ReadOnlyBook findBookByName(String title) {
 		for (Book book : books) {
 			if (book.getTitle().equals(title)) {
-				return book;
+				return new Book(book);
 			}
 		}
 		return null;
