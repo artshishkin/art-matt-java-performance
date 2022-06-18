@@ -11,7 +11,7 @@ public class Main {
 		price.getRates().forEach( (k,v) -> System.out.println(k + " " + v));
 		
 		//PROBLEM 1 - can we change one of the rates?
-		price.getRates().put("USD", 2d);		
+//		price.getRates().put("USD", 2d); //NOT ALLOWED NOW
 		System.out.println("The current exchange rates are USD 1 = ");
 		price.getRates().forEach( (k,v) -> System.out.println(k + " " + v));
 		

@@ -33,7 +33,7 @@ public class Price {
 	}
 	
 	public Map<String,Double> getRates() {
-		return rates;
+		return Map.copyOf(rates);
 	}
 	
 }
