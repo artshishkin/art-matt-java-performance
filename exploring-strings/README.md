@@ -59,6 +59,28 @@ Interning - putting String into the String Pool in Heap
    - `Maximum bucket size     :        35`
 3. Bucket size enlarged automatically ???
 
+#### 45. Tuning the size of the heap
+
+1. Flags
+   - run `java -XX:+PrintFlagsFinal`
+   - MaxHeapFreeRatio = 70
+   - MaxHeapSize = 4127195136
+   - InitialHeapSize = 257949696
+2. Reduce heap size
+   - `java -XX:MaxHeapSize=400m -XX:+PrintStringTableStatistics net.shyshkin.study.performance.exploringstrings.ManyStrings`
+3. Result
+  - `Exception in thread "main" java.lang.OutOfMemoryError: Java heap space`
+  - `  at java.base/java.lang.Integer.toString(Integer.java:440)`
+  - `  at java.base/java.lang.String.valueOf(String.java:3058)`
+  - `  at net.shyshkin.study.performance.exploringstrings.ManyStrings.main(ManyStrings.java:14)`
+  - `  SymbolTable statistics:`
+  - `...`
+  - `  statistics unavailable at this moment`
+4. Enlarge initial heap size
+  - for possible performance
+  - `java -XX:InitialHeapSize=1g -XX:+PrintStringTableStatistics net.shyshkin.study.performance.exploringstrings.ManyStrings`
+  - `Elapsed time was :PT52.1821638S` (but was PT48.7560031S ???)
+
 
 
 
