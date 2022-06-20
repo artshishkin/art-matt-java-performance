@@ -1,4 +1,4 @@
-[![GitHub issues](https://img.shields.io/github/issues/artshishkin/art-gelenler-event-driven)](https://github.com/artshishkin/art-gelenler-event-driven/issues)
+[![GitHub issues](https://img.shields.io/github/issues/artshishkin/art-matt-java-performance)](https://github.com/artshishkin/art-matt-java-performance/issues)
 ![Project licence][licence]
 
 # art-matt-java-performance
