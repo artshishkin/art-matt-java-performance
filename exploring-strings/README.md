@@ -81,7 +81,12 @@ Interning - putting String into the String Pool in Heap
   - `java -XX:InitialHeapSize=1g -XX:+PrintStringTableStatistics net.shyshkin.study.performance.exploringstrings.ManyStrings`
   - `Elapsed time was :PT52.1821638S` (but was PT48.7560031S ???)
 
+#### 46. Shortcut syntax for heap tuning flags
 
+1. Xmx
+  - `-Xmx1g` - `-XX:MaxHeapSize=1g`
+2. Xms
+  - `-Xms128m` - `-XX:InitialHeapSize=128m`
 
 
    
