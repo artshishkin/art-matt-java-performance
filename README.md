@@ -1,3 +1,4 @@
+[![GitHub issues](https://img.shields.io/github/issues/artshishkin/art-gelenler-event-driven)](https://github.com/artshishkin/art-gelenler-event-driven/issues)
 ![Project licence][licence]
 
 # art-matt-java-performance

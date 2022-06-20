@@ -69,24 +69,24 @@ Interning - putting String into the String Pool in Heap
 2. Reduce heap size
    - `java -XX:MaxHeapSize=400m -XX:+PrintStringTableStatistics net.shyshkin.study.performance.exploringstrings.ManyStrings`
 3. Result
-  - `Exception in thread "main" java.lang.OutOfMemoryError: Java heap space`
-  - `  at java.base/java.lang.Integer.toString(Integer.java:440)`
-  - `  at java.base/java.lang.String.valueOf(String.java:3058)`
-  - `  at net.shyshkin.study.performance.exploringstrings.ManyStrings.main(ManyStrings.java:14)`
-  - `  SymbolTable statistics:`
-  - `...`
-  - `  statistics unavailable at this moment`
+   - `Exception in thread "main" java.lang.OutOfMemoryError: Java heap space`
+   - `  at java.base/java.lang.Integer.toString(Integer.java:440)`
+   - `  at java.base/java.lang.String.valueOf(String.java:3058)`
+   - `  at net.shyshkin.study.performance.exploringstrings.ManyStrings.main(ManyStrings.java:14)`
+   - `  SymbolTable statistics:`
+   - `...`
+   - `  statistics unavailable at this moment`
 4. Enlarge initial heap size
-  - for possible performance
-  - `java -XX:InitialHeapSize=1g -XX:+PrintStringTableStatistics net.shyshkin.study.performance.exploringstrings.ManyStrings`
-  - `Elapsed time was :PT52.1821638S` (but was PT48.7560031S ???)
+   - for possible performance
+   - `java -XX:InitialHeapSize=1g -XX:+PrintStringTableStatistics net.shyshkin.study.performance.exploringstrings.ManyStrings`
+   - `Elapsed time was :PT52.1821638S` (but was PT48.7560031S ???)
 
 #### 46. Shortcut syntax for heap tuning flags
 
 1. Xmx
-  - `-Xmx1g` - `-XX:MaxHeapSize=1g`
+   - `-Xmx1g` - `-XX:MaxHeapSize=1g`
 2. Xms
-  - `-Xms128m` - `-XX:InitialHeapSize=128m`
+   - `-Xms128m` - `-XX:InitialHeapSize=128m`
 
 
    
