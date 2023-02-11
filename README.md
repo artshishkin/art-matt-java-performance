@@ -15,5 +15,6 @@ Tutorial - Java Application Performance and Memory Management - from Matt Greenc
 - [Section 9: Chapter 9 - The Metaspace and internal JVM memory optimisations](exploring-strings/README.md)
 - [Section 10: Chapter 10 - Tuning the JVM's Memory Settings](exploring-strings/README.md)
 - [Section 11: Chapter 11 - Introducing Garbage Collection](introducing-garbage-collection/README.md)
+- Section 12: Chapter 12 - Monitoring the Heap
 
 [licence]: https://img.shields.io/github/license/artshishkin/art-matt-java-performance.svg
