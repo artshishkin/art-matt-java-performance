@@ -1,15 +1,15 @@
 package net.shyshkin.study.performance.soft.leaks;
 
 import java.util.Date;
-import java.util.List;
 import java.util.Optional;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class CustomerManager {
 
-    private List<Customer> customers = new CopyOnWriteArrayList<>();
+    private Queue<Customer> customers = new ConcurrentLinkedQueue<Customer>();
     private AtomicInteger nextAvalailbleId = new AtomicInteger();
 
     public void addCustomer(Customer customer) {
@@ -19,10 +19,7 @@ public class CustomerManager {
 
     public Optional<Customer> getNextCustomer() {
 
-        if (customers.size() > 0) {
-            return Optional.of(customers.remove(0));
-        }
-        return Optional.empty();
+        return Optional.ofNullable(customers.poll());
     }
 
     public void howManyCustomers() {
