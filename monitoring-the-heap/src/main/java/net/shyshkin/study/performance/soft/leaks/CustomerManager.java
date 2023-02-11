@@ -1,34 +1,26 @@
 package net.shyshkin.study.performance.soft.leaks;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class CustomerManager {
 
-    private List<Customer> customers = new ArrayList<Customer>();
-    private int nextAvalailbleId = 0;
-    private int lastProcessedId = -1;
+    private List<Customer> customers = new CopyOnWriteArrayList<>();
+    private AtomicInteger nextAvalailbleId = new AtomicInteger();
 
     public void addCustomer(Customer customer) {
-        synchronized (this) {
-            customer.setId(nextAvalailbleId);
-            synchronized (customers) {
-                customers.add(customer);
-            }
-            nextAvalailbleId++;
-        }
-
+        customer.setId(nextAvalailbleId.getAndIncrement());
+        customers.add(customer);
     }
 
     public Optional<Customer> getNextCustomer() {
 
-        synchronized (customers) {
-            if (customers.size() > 0) {
-                return Optional.of(customers.remove(0));
-            }
+        if (customers.size() > 0) {
+            return Optional.of(customers.remove(0));
         }
         return Optional.empty();
     }
