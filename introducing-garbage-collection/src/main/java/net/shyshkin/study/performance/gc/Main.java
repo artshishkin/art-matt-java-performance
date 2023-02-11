@@ -15,11 +15,16 @@ public class Main {
 		// let's create lots of objects....
 		List<Customer> customers = new ArrayList<Customer>();
 		
-		for (int i=0; i<100; i++)
+//		for (int i=0; i<100; i++)
+//		{
+//			customers.add(new Customer("Customer "+i));
+//		}
+
+		for (int i=0; i<1_000_000; i++)
 		{
-			customers.add(new Customer("Customer "+i));
+			Customer customer = new Customer("Customer " + i);
 		}
-		
+
 		availableBytes = runtime.freeMemory();
 		System.out.println("Available memory  when customers created: " + availableBytes / 1024 + "k");
 		

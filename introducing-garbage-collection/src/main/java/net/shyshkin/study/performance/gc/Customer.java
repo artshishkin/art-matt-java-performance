@@ -27,5 +27,8 @@ public class Customer  {
 	@Override
 	protected void finalize() throws Throwable {
 		System.out.println("This object is being g.c.'d " + name);
+		while(true){
+
+		}
 	}
 }
