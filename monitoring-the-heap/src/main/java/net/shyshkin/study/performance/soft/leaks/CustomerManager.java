@@ -25,9 +25,10 @@ public class CustomerManager {
 
     public Optional<Customer> getNextCustomer() {
 
-        if (lastProcessedId + 1 > nextAvalailbleId) {
-            lastProcessedId++;
-            return Optional.of(customers.get(lastProcessedId));
+        synchronized (customers) {
+            if (customers.size() > 0) {
+                return Optional.of(customers.remove(0));
+            }
         }
         return Optional.empty();
     }

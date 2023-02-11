@@ -2,7 +2,7 @@
   <configuration default="false" name="soft-memory-leaks" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="net.shyshkin.study.performance.soft.leaks.CustomerHarness" />
     <module name="monitoring-the-heap" />
-    <option name="VM_PARAMETERS" value="-Xmx10m" />
+    <option name="VM_PARAMETERS" value="-Xmx50m" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="net.shyshkin.study.performance.soft.leaks.*" />
