@@ -15,9 +15,9 @@ public class Main {
 		// let's create lots of objects....
 		List<Customer> customers = new ArrayList<Customer>();
 		
-		for (int i=0; i<1000000; i++)
+		for (int i=0; i<100; i++)
 		{
-			customers.add(new Customer("John"));	
+			customers.add(new Customer("Customer "+i));
 		}
 		
 		availableBytes = runtime.freeMemory();
@@ -37,6 +37,8 @@ public class Main {
 		
 		availableBytes = runtime.freeMemory();
 		System.out.println("Available memory  after GC command: " + availableBytes / 1024 + "k");
+
+		Thread.sleep(1);
 	}
 
 	
