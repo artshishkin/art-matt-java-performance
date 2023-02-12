@@ -26,6 +26,7 @@
         <module>introducing-garbage-collection</module>
         <module>monitoring-the-heap</module>
         <module>analyzing-heap-dump</module>
+        <module>generational-garbage-collection</module>
     </modules>
 
 </project>
