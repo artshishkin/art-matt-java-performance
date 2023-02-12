@@ -27,6 +27,7 @@
         <module>monitoring-the-heap</module>
         <module>analyzing-heap-dump</module>
         <module>generational-garbage-collection</module>
+        <module>gc-tuning</module>
     </modules>
 
 </project>
