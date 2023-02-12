@@ -16,5 +16,6 @@ Tutorial - Java Application Performance and Memory Management - from Matt Greenc
 - [Section 10: Chapter 10 - Tuning the JVM's Memory Settings](exploring-strings/README.md)
 - [Section 11: Chapter 11 - Introducing Garbage Collection](introducing-garbage-collection/README.md)
 - Section 12: Chapter 12 - Monitoring the Heap
+- [#12 Section 13: Chapter 13 - Analysing a heap dump](analyzing-heap-dump/README.md)
 
 [licence]: https://img.shields.io/github/license/artshishkin/art-matt-java-performance.svg

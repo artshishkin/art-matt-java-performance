@@ -25,6 +25,7 @@
         <module>exploring-strings</module>
         <module>introducing-garbage-collection</module>
         <module>monitoring-the-heap</module>
+        <module>analyzing-heap-dump</module>
     </modules>
 
 </project>
