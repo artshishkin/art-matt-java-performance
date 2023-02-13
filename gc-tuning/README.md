@@ -60,3 +60,15 @@ Types of Garbage Collectors
     - `-XX:+UseG1GC` - default `Yes` for my JVM (OpenJDK Runtime Environment GraalVM CE 22.3.0 (build
       17.0.5+8-jvmci-22.3-b08))
     - `UseG1GC` - default from Java10
+
+#### 72. Tuning the G1 garbage collector
+
+Flags:
+
+1. `-XX:ConcGCThreads=n` - The number of threads available for the smaller regional collections
+    - I have default 2
+2. `-XX:InitiatingHeapOccupancyPercent=n - GC starts when the heap reaches its value
+    - default is 45 %
+
+
+
