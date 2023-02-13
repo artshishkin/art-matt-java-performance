@@ -35,11 +35,28 @@ Flags
 - `jinfo -flag SurvivorRatio 13008`
     - default `-XX:SurvivorRatio=8` (S0 and S1 should be 1/8 of young generation)
     - so Eden Space should be 8 - 1 - 1 = 6/8 ???(as Matt says)
-- Set `-XX:SurvivorRatio=5`     
+- Set `-XX:SurvivorRatio=5`
 
 #### 69. Tuning garbage collection - generations needed to become old
 
 - `jinfo -flag MaxTenuringThreshold 20032`
     - default `-XX:MaxTenuringThreshold=15`
-- Set `-XX:MaxTenuringThreshold=15` [1...16]  
+- Set `-XX:MaxTenuringThreshold=15` [1...16]
 
+#### 70. Selecting a garbage collector
+
+Types of Garbage Collectors
+
+1. Serial
+    - `-XX:+UseSerialGC`
+    - `jinfo -flag UseSerialGC 20920`
+    - default `No`
+2. Parallel
+    - `-XX:+UseParallelGC`
+    - `jinfo -flag UseParallelGC 20920`
+    - default `No`
+3. Mostly Concurrent
+    - `-XX:+UseConcMarkSweepGC` - default `No` for JVM17 (default in Java9)
+    - `-XX:+UseG1GC` - default `Yes` for my JVM (OpenJDK Runtime Environment GraalVM CE 22.3.0 (build
+      17.0.5+8-jvmci-22.3-b08))
+    - `UseG1GC` - default from Java10
