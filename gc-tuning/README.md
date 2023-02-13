@@ -37,4 +37,9 @@ Flags
     - so Eden Space should be 8 - 1 - 1 = 6/8 ???(as Matt says)
 - Set `-XX:SurvivorRatio=5`     
 
-    
+#### 69. Tuning garbage collection - generations needed to become old
+
+- `jinfo -flag MaxTenuringThreshold 20032`
+    - default `-XX:MaxTenuringThreshold=15`
+- Set `-XX:MaxTenuringThreshold=15` [1...16]  
+
