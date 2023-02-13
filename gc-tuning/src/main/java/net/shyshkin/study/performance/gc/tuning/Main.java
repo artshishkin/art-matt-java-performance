@@ -12,9 +12,8 @@ public class Main {
         while (true) {
             Customer customer = new Customer(UUID.randomUUID().toString());
             customers.add(customer);
-            if (customers.size() > 100_000) {
-                Thread.sleep(10);
-                for (int i = 0; i < 1_000; i++) {
+            if (customers.size() > 10_000) {
+                for (int i = 0; i < 5_000; i++) {
                     customers.poll();
                 }
             }

@@ -7,4 +7,13 @@
 
 VM Argument to monitor garbage collectors
 - `-verbose:gc`
+
+#### 66. Turning off automated heap allocation sizing
+
+View flag `UseAdaptiveSizePolicy`
+- `jps` &rarr; view process Id
+- `jinfo -flag UseAdaptiveSizePolicy` &rarr; the default is `ON`
+Switch off adaptive size selection
+- `-XX:-UseAdaptiveSizePolicy`
+
    
