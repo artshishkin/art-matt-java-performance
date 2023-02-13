@@ -25,8 +25,16 @@ Flags
 
 - `-XX:NewRatio=n` (n=4 OldGeneration will be 4 times larger then the young generation)
     - check default
-      - `jps` &rarr; view process Id
-      - `jinfo -flag NewRatio 21292` &rarr;
-      - the default is `-XX:NewRatio=2`
+        - `jps` &rarr; view process Id
+        - `jinfo -flag NewRatio 21292` &rarr;
+        - the default is `-XX:NewRatio=2`
 - Set `-XX:NewRatio=1`
+
+#### 68. Tuning garbage collection - survivor space allocation
+
+- `jinfo -flag SurvivorRatio 13008`
+    - default `-XX:SurvivorRatio=8` (S0 and S1 should be 1/8 of young generation)
+    - so Eden Space should be 8 - 1 - 1 = 6/8 ???(as Matt says)
+- Set `-XX:SurvivorRatio=5`     
+
     
