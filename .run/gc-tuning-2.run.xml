@@ -2,7 +2,7 @@
   <configuration default="false" name="gc-tuning-2" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="net.shyshkin.study.performance.gc.tuning.Main" />
     <module name="gc-tuning" />
-    <option name="VM_PARAMETERS" value="-Xmx20m" />
+    <option name="VM_PARAMETERS" value="-Xmx20m -XX:NewRatio=1" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="net.shyshkin.study.performance.gc.tuning.*" />
