@@ -71,4 +71,8 @@ Flags:
     - default is 45 %
 
 
+#### 73. String de-duplication
 
+Flag:
+- `-XX:+UseStringDeduplication` - switch ON String deduplication
+- when you sure there are a lot of duplicate strings, they will live for a long period
