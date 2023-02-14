@@ -28,6 +28,7 @@
         <module>analyzing-heap-dump</module>
         <module>generational-garbage-collection</module>
         <module>gc-tuning</module>
+        <module>profiler</module>
     </modules>
 
 </project>
