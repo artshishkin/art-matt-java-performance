@@ -30,3 +30,17 @@ Download [Java Mission Control](https://www.oracle.com/java/technologies/jdk-mis
 3. Start Flight Recording through Command Line
     - `-XX:StartFlightRecording=delay=2min,duration=60s,name=Test,filename=recording.jfr,settings=profile`
 
+#### 82. Analyzing a flight recording
+
+JMC &rarr; Right Click &rarr; Dump Last Part of Recording
+
+- Method Profiling:
+    - The methods that used the most CPU are: •net.shyshkin.study.performance.profiler.FibonnaciNumbersTask.run() (48,2
+      % of samples)
+- Java Blocking:
+    - The most blocking thread was ''combinedNumbersThread'', which was blocked 1 018 times for a total of 14 min 34 s.
+- Pane Threads
+    - view `combineNumbersThread`
+    - Blocked region >
+    - Monitor Class: `PrimeNumbersTask`
+    - Previous Monitor Owner: `combineNumbersThread`
