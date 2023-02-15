@@ -2,7 +2,7 @@
   <configuration default="false" name="micro-benchmarking" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="net.shyshkin.study.performance.benchmarking.Main" />
     <module name="benchmarking" />
-    <option name="VM_PARAMETERS" value="-XX:+PrintCompilation" />
+    <option name="VM_PARAMETERS" value="-XX:+PrintCompilation -XX:CompileThreshold=1000" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="net.shyshkin.study.performance.benchmarking.*" />
