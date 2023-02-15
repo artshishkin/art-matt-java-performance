@@ -5,7 +5,7 @@
     <option name="VM_PARAMETERS" value="-XX:+PrintCompilation -XX:CompileThreshold=1000" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="net.shyshkin.study.performance.benchmarking.*" />
+        <option name="PATTERN" value="net.shyshkin.study.performance.benchmarking.art.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>
