@@ -1,11 +1,11 @@
 package net.shyshkin.study.performance.profiler;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class FibonnaciNumbersTask implements Runnable {
 
-    private List<Integer> fibonnacis = new ArrayList<Integer>();
+    private Queue<Integer> fibonnacis = new ConcurrentLinkedQueue<>();
     private Boolean finished;
 
     public void taskComplete() {
@@ -13,17 +13,11 @@ public class FibonnaciNumbersTask implements Runnable {
     }
 
     public int getSize() {
-        synchronized (this) {
-            return (fibonnacis.size());
-        }
+        return (fibonnacis.size());
     }
 
     public Integer getNextNumber() {
-        synchronized (this) {
-            if (fibonnacis.size() > 0) {
-                return fibonnacis.remove(0);
-            } else return null;
-        }
+        return fibonnacis.poll();
     }
 
 
@@ -33,22 +27,18 @@ public class FibonnaciNumbersTask implements Runnable {
         int a = 0;
         int b = 1;
 
-        synchronized (this) {
-            fibonnacis.add(a);
-            fibonnacis.add(b);
-        }
+        fibonnacis.add(a);
+        fibonnacis.add(b);
 
         while (!finished) {
             //only the add really needs to be synchronized.
 
-            synchronized (this) {
-                //we need to stop the fibonnaci numbers growing too quickly so we'll pause if there are > 100 waiting to be collected
-                if (fibonnacis.size() < 100) {
-                    int c = a + b;
-                    fibonnacis.add(c);
-                    a = b;
-                    b = c;
-                }
+            //we need to stop the fibonnaci numbers growing too quickly so we'll pause if there are > 100 waiting to be collected
+            if (fibonnacis.size() < 100) {
+                int c = a + b;
+                fibonnacis.add(c);
+                a = b;
+                b = c;
             }
 
         }

@@ -1,6 +1,6 @@
 package net.shyshkin.study.performance.profiler;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class CombinedNumbersTask implements Runnable {
@@ -8,9 +8,9 @@ public class CombinedNumbersTask implements Runnable {
     private FibonnaciNumbersTask fibonnaciNumbersTask;
     private PrimeNumbersTask primeNumbersTask;
 
-    private List<Integer> primes = new ArrayList<Integer>();
-    private List<Integer> fibonnacis = new ArrayList<Integer>();
-    private List<Integer> combined = new ArrayList<Integer>();
+    private List<Integer> primes = new LinkedList<>();
+    private List<Integer> fibonnacis = new LinkedList<>();
+    private List<Integer> combined = new LinkedList<>();
 
     private Boolean finished;
 
@@ -19,9 +19,7 @@ public class CombinedNumbersTask implements Runnable {
     }
 
     public void printCombinedNumbers() {
-        synchronized (this) {
-            System.out.println(combined.toString());
-        }
+        System.out.println(combined.toString());
     }
 
     public void printStatus() {
@@ -37,12 +35,14 @@ public class CombinedNumbersTask implements Runnable {
     }
 
     public int getSize() {
-        synchronized (this) {
-            if (combined == null) return 0;
-            return (combined.size());
-        }
+        return combined.size();
     }
 
+//    Threads in the application were blocked on locks for a total of 35,415 s.
+//
+//    The most blocking monitor class was ''net.shyshkin.study.performance.profiler.CombinedNumbersTask'', which was blocked 151 times for a total of 35,415 s.
+//-----------------------------
+//  After improving -> this issue disappears in JMC
 
     @Override
     public void run() {
@@ -54,10 +54,10 @@ public class CombinedNumbersTask implements Runnable {
             Integer fib = fibonnaciNumbersTask.getNextNumber();
             if (fib != null) fibonnacis.add(fib);
 
-            synchronized (this) {
-                combined = new ArrayList<>(primes);
-                combined.retainAll(fibonnacis);
-            }
+            List<Integer> temp = new LinkedList<>(primes);
+            temp.retainAll(fibonnacis);
+
+            combined = temp;
 
         }
 
