@@ -29,6 +29,7 @@
         <module>generational-garbage-collection</module>
         <module>gc-tuning</module>
         <module>profiler</module>
+        <module>benchmarking</module>
     </modules>
 
 </project>

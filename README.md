@@ -20,5 +20,6 @@ Tutorial - Java Application Performance and Memory Management - from Matt Greenc
 - [Section 14: Chapter 14 - Generational Garbage Collection](generational-garbage-collection/README.md)
 - [Section 15: Chapter 15 - Garbage Collector tuning & selection](gc-tuning/README.md)
 - [Section 16: Chapter 16 - Using a profiler to analyse application performance](profiler/README.md)
+- Section 17: Chapter 17 - Assessing Performance
 
 [licence]: https://img.shields.io/github/license/artshishkin/art-matt-java-performance.svg
