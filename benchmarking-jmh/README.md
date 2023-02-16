@@ -8,9 +8,10 @@
 
 Use instructions from [Java Microbenchmark Harness (JMH)](https://github.com/openjdk/jmh)
 
-##### Step 1. Setting up the benchmarking project. 
+##### Step 1. Setting up the benchmarking project.
 
 The following command will generate the new JMH-driven project:
+
 ```shell
 mvn archetype:generate \
   -DinteractiveMode=false \
@@ -20,7 +21,8 @@ mvn archetype:generate \
   -DartifactId=jmh \
   -Dversion=1.0
 ```
-##### Step 2. Building the benchmarks. 
+
+##### Step 2. Building the benchmarks.
 
 After the project is generated, you can build it with the following Maven command:
 
@@ -28,9 +30,19 @@ After the project is generated, you can build it with the following Maven comman
 $ cd jmh/
 $ mvn clean verify
 ```
-##### Step 3. Running the benchmarks. 
 
-After the build is done, you will get the self-contained executable JAR, which holds your benchmark, and all essential JMH infrastructure code:
+##### Step 3. Running the benchmarks.
+
+After the build is done, you will get the self-contained executable JAR, which holds your benchmark, and all essential
+JMH infrastructure code:
+
 ```shell
 $ java -jar target/benchmarks.jar
 ```
+
+#### 92. Using different benchmark modes
+
+- `java -jar target/benchmarks.jar -h` - view all options
+- `java -jar target/benchmarks.jar -bm avgt` - benchmark mode: AverageTime
+
+
