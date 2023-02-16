@@ -31,6 +31,7 @@
         <module>profiler</module>
         <module>benchmarking</module>
         <module>benchmarking-jmh</module>
+        <module>benchmarking-exercise</module>
     </modules>
 
 </project>

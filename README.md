@@ -22,5 +22,6 @@ Tutorial - Java Application Performance and Memory Management - from Matt Greenc
 - [Section 16: Chapter 16 - Using a profiler to analyse application performance](profiler/README.md)
 - Section 17: Chapter 17 - Assessing Performance
 - [Section 18: Chapter 18 - Benchmarking with JMH](benchmarking-jmh/README.md)
+- [Section 19: Chapter 19 - Performance and Benchmarking Exercise](benchmarking-exercise/README.md)
 
 [licence]: https://img.shields.io/github/license/artshishkin/art-matt-java-performance.svg

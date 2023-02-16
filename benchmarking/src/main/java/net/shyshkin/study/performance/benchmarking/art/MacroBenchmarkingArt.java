@@ -9,6 +9,10 @@ public class MacroBenchmarkingArt {
     public static void main(String[] args) throws InterruptedException {
 
         int target = 8;
+        String primesTarget = System.getProperty("primes.target"); //through VM Options `-Dprimes.target=100` for example
+        if (primesTarget != null) {
+            target = Integer.parseInt(primesTarget);
+        }
 
         LocalDateTime start = LocalDateTime.now();
 

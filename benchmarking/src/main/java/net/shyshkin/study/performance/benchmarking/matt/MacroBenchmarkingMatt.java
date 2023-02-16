@@ -7,7 +7,12 @@ import java.time.format.DateTimeFormatter;
 public class MacroBenchmarkingMatt {
 
     public static void main(String[] args) throws InterruptedException {
+
         int target = 8;
+        String primesTarget = System.getProperty("primes.target"); //through VM Options `-Dprimes.target=100` for example
+        if (primesTarget != null) {
+            target = Integer.parseInt(primesTarget);
+        }
 
         LocalDateTime start = LocalDateTime.now();
 
@@ -34,12 +39,6 @@ public class MacroBenchmarkingMatt {
             iterations++;
             combined = combinedNumbersTask.getSize();
 
-            if (combined > 100) {
-                primeNumbersTask.taskComplete();
-                fibonnaciNumbersTask.taskComplete();
-                combinedNumbersTask.taskComplete();
-            }
-
             if (iterations > 400) {
                 iterations = 0;
                 System.out.println("Currently got " + combined + " matching numbers - " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("hh:mm:ss")));
@@ -47,6 +46,11 @@ public class MacroBenchmarkingMatt {
                 Thread.sleep(1000);
             }
         }
+
+        primeNumbersTask.taskComplete();
+        fibonnaciNumbersTask.taskComplete();
+        combinedNumbersTask.taskComplete();
+
         System.out.println("Job done  - found " + combined + ".");
         if (combined > 0) combinedNumbersTask.printCombinedNumbers();
 
