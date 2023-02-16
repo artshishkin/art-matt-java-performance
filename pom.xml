@@ -30,6 +30,7 @@
         <module>gc-tuning</module>
         <module>profiler</module>
         <module>benchmarking</module>
+        <module>benchmarking-jmh</module>
     </modules>
 
 </project>
