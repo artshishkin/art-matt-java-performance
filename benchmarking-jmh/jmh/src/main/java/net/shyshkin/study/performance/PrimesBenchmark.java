@@ -31,14 +31,27 @@
 
 package net.shyshkin.study.performance;
 
+import net.shyshkin.study.performance.benchmarking.NumberChecker;
 import org.openjdk.jmh.annotations.Benchmark;
 
-public class MyBenchmark {
+public class PrimesBenchmark {
+
+    public static final int MAX_PRIME_NUMBER = 50_000;
 
     @Benchmark
-    public void testMethod() {
-        // This is a demo/sample template for building your JMH benchmarks. Edit as needed.
-        // Put your benchmark code here.
+    public void originalBenchmarking() {
+        NumberChecker numberChecker = new NumberChecker();
+        for (int i = 2; i < MAX_PRIME_NUMBER; i++) {
+            numberChecker.isPrimeOriginal(i);
+        }
+    }
+
+    @Benchmark
+    public void optimizedBenchmarking() {
+        NumberChecker numberChecker = new NumberChecker();
+        for (int i = 2; i < MAX_PRIME_NUMBER; i++) {
+            numberChecker.isPrimeOptimized(i);
+        }
     }
 
 }
