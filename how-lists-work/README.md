@@ -13,3 +13,12 @@
 - RoleUnresolvedList
 - Stack
 - Vector
+
+#### 100. The CopyOnWriteArrayList
+
+Consider using it when:
+- Multi-threaded application
+- Multiple threads accessing the same list
+- Lots of iterations / reads
+- Few writes / additions / deletions
+
