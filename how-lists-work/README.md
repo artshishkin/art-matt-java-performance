@@ -30,4 +30,14 @@ ListBenchmark.arrayListSettingSize     avgt   25  1,265 ? 0,035   s/op
 ListBenchmark.arrayListStream          avgt   25  1,503 ? 0,062   s/op
 ListBenchmark.arrayListStreamWithCopy  avgt   25  1,414 ? 0,036   s/op
 ListBenchmark.arrayListStreamWithSize  avgt   25  1,138 ? 0,011   s/op
+
+ListBenchmark.linkedListStream         avgt   25  4,314 ? 0,085   s/op
+```
+
+#### 106. Choosing the optimal list type
+
+```
+Benchmark                                            Mode  Cnt          Score         Error  Units
+ArrayListVsLinkedListBenchmark.arrayListGetByIndex   avgt   25          1,257 ?       0,035  ns/op
+ArrayListVsLinkedListBenchmark.linkedListGetByIndex  avgt   25  267266424,288 ? 4519729,374  ns/op
 ```

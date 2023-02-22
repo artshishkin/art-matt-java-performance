@@ -29,4 +29,14 @@ public class Book {
     public Double getPrice() {
         return price;
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }
