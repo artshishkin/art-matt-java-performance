@@ -37,7 +37,10 @@ ListBenchmark.linkedListStream         avgt   25  4,314 ? 0,085   s/op
 #### 106. Choosing the optimal list type
 
 ```
-Benchmark                                            Mode  Cnt          Score         Error  Units
-ArrayListVsLinkedListBenchmark.arrayListGetByIndex   avgt   25          1,257 ?       0,035  ns/op
-ArrayListVsLinkedListBenchmark.linkedListGetByIndex  avgt   25  267266424,288 ? 4519729,374  ns/op
+Benchmark                                                    Mode  Cnt          Score         Error  Units
+ArrayListVsLinkedListBenchmark.arrayListAddAt0RemoveLast     avgt    5   10783993,707 ±  221833,119  ns/op
+ArrayListVsLinkedListBenchmark.arrayListGetByIndex           avgt    5          1,304 ±       0,074  ns/op
+ArrayListVsLinkedListBenchmark.linkedListAddAt0RemoveLast    avgt    5       1658,440 ±     590,546  ns/op
+ArrayListVsLinkedListBenchmark.linkedListAddFirstRemoveLast  avgt    5       1669,036 ±     413,820  ns/op
+ArrayListVsLinkedListBenchmark.linkedListGetByIndex          avgt    5  258875113,846 ± 1439989,735  ns/op
 ```
