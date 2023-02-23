@@ -23,6 +23,14 @@ public class PrimitivesPerformance {
         return (result);
     }
 
+    private double addNumbersDoublePrimitive(long howMany) {
+        double result = 0.0;
+        for (long l = 0; l <= howMany; l++) {
+            result = result + 17.0;
+        }
+        return (result);
+    }
+
     private Long addNumbersObject(Long howMany) {
         Long result = 0L;
         Long adder = 17L;
@@ -32,14 +40,33 @@ public class PrimitivesPerformance {
         return (result);
     }
 
-    @Benchmark
+    private Double addNumbersDoubleObject(Long howMany) {
+        Double result = 0.0;
+        Double adder = 17.0;
+        for (Long l = 0L; l <= howMany; l++) {
+            result = result + adder;
+        }
+        return (result);
+    }
+
+//    @Benchmark
     public void addNumbersPrimitiveBenchmark() {
         long res = addNumbersPrimitive(10_000_000L);
     }
 
-    @Benchmark
+//    @Benchmark
     public void addNumbersObjectBenchmark() {
         Long res = addNumbersObject(10_000_000L);
+    }
+
+    @Benchmark
+    public void addNumbersPrimitiveDoubleBenchmark() {
+        var res = addNumbersDoublePrimitive(10_000_000L);
+    }
+
+    @Benchmark
+    public void addNumbersObjectDoubleBenchmark() {
+        var res = addNumbersDoubleObject(10_000_000L);
     }
 
     /*
