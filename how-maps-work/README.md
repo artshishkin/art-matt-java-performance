@@ -14,3 +14,12 @@ MapBenchmark.putToHashMap                                       avgt    5  3267,
 MapBenchmark.putToHashMapInitialCapacity                        avgt    5  3056,169 ± 328,960  ms/op
 MapBenchmark.putToHashMapInitialCapacityLoadFactor              avgt    5  2856,929 ± 180,946  ms/op
 ```
+
+#### 112. HashMap Performance and 113. The rules for Hashcodes
+
+```
+Benchmark                                       Mode  Cnt       Score       Error  Units
+HashCodeBenchmark.getLastFromAllInOneBucketMap  avgt    5  598155,646 ± 65873,250  ns/op
+HashCodeBenchmark.getLastFromUsualHashMap       avgt    5     104,699 ±     2,341  ns/op
+```
+
