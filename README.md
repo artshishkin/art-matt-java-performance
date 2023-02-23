@@ -23,6 +23,7 @@ Tutorial - Java Application Performance and Memory Management - from Matt Greenc
 - Section 17: Chapter 17 - Assessing Performance
 - [Section 18: Chapter 18 - Benchmarking with JMH](benchmarking-jmh/README.md)
 - [Section 19: Chapter 19 - Performance and Benchmarking Exercise](benchmarking-exercise/README.md)
-- [Section 20: Chapter 20 - How Lists Work](benchmarking-exercise/README.md)
+- [Section 20: Chapter 20 - How Lists Work](how-lists-work/README.md)
+- [Section 21: Chapter 21 - How Maps Work](how-maps-work/README.md)
 
 [licence]: https://img.shields.io/github/license/artshishkin/art-matt-java-performance.svg

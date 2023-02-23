@@ -33,6 +33,7 @@
         <module>benchmarking-jmh</module>
         <module>benchmarking-exercise</module>
         <module>how-lists-work</module>
+        <module>how-maps-work</module>
     </modules>
 
 </project>
