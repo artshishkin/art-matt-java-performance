@@ -44,3 +44,15 @@ ArrayListVsLinkedListBenchmark.linkedListAddAt0RemoveLast    avgt    5       165
 ArrayListVsLinkedListBenchmark.linkedListAddFirstRemoveLast  avgt    5       1669,036 ±     413,820  ns/op
 ArrayListVsLinkedListBenchmark.linkedListGetByIndex          avgt    5  258875113,846 ± 1439989,735  ns/op
 ```
+
+#### 107. Sorting lists
+
+```
+Benchmark                             Mode  Cnt      Score      Error  Units
+SortingListBenchmark.cloneArrayList   avgt    5     51,750 ±   17,359  ms/op
+SortingListBenchmark.cloneLinkedList  avgt    5   2310,875 ± 1435,638  ms/op
+SortingListBenchmark.copyArrayList    avgt    5     41,019 ±    7,486  ms/op
+SortingListBenchmark.copyLinkedList   avgt    5   2083,803 ±  927,795  ms/op
+SortingListBenchmark.sortArrayList    avgt    5  11633,503 ± 1582,596  ms/op
+SortingListBenchmark.sortLinkedList   avgt    5  13570,911 ± 4381,387  ms/op
+```
