@@ -18,3 +18,12 @@ Benchmark                                            Mode  Cnt         Score    
 BigDecimalPerformance.addNumbersBigDecimalBenchmark  avgt    5  21199383,498 ± 1912439,495  ns/op
 BigDecimalPerformance.addNumbersDoubleBenchmark      avgt    5    818097,284 ±   87883,840  ns/op
 ```
+
+#### 121. Using the StringBuilder
+```
+Benchmark                                              Mode  Cnt    Score   Error  Units
+StringBuilderPerformance.generateNamesConcat           avgt    5  157,525 ± 0,589  ns/op
+StringBuilderPerformance.generateNamesConcatOptimized  avgt    5   80,548 ± 0,419  ns/op
+StringBuilderPerformance.generateNamesStringBuilder    avgt    5  129,135 ± 0,368  ns/op
+StringBuilderPerformance.generateNamesStringJoiner     avgt    5  103,091 ± 0,493  ns/op
+```
