@@ -36,6 +36,7 @@
         <module>how-maps-work</module>
         <module>other-coding-choices</module>
         <module>graalvm</module>
+        <module>other-jvm-languages</module>
     </modules>
 
 </project>

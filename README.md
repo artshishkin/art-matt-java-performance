@@ -27,5 +27,6 @@ Tutorial - Java Application Performance and Memory Management - from Matt Greenc
 - [Section 21: Chapter 21 - How Maps Work](how-maps-work/README.md)
 - [Section 22: Chapter 22 - Other Coding Choices](other-coding-choices/README.md)
 - [Section 23: Chapter 23 - GraalVM](graalvm/README.md)
+- Section 24: Chapter 24 - Using Other JVM Languages
 
 [licence]: https://img.shields.io/github/license/artshishkin/art-matt-java-performance.svg
