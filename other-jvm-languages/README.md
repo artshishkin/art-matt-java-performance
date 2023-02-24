@@ -20,3 +20,11 @@
 - `javap -v Simple.class`
   - `v` - verbose
 - `javap -v Mathematics.class`
+
+#### 132. Disassembling bytecode back to Java
+
+- `java -jar data/cfr-0.152.jar target/classes/net/shyshkin/study/performance/languages/Simple.class`
+- `java -jar data/cfr-0.152.jar target/classes/net/shyshkin/study/performance/languages/Mathematics.class`
+- `java -jar data/cfr-0.152.jar data/JavaMain.class`
+- `java -jar data/cfr-0.152.jar data/KotlinMain.class`
+
