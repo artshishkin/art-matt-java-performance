@@ -35,6 +35,7 @@
         <module>how-lists-work</module>
         <module>how-maps-work</module>
         <module>other-coding-choices</module>
+        <module>graalvm</module>
     </modules>
 
 </project>
