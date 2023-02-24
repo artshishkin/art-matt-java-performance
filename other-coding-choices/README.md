@@ -11,3 +11,10 @@ PrimitivesPerformance.addNumbersPrimitiveBenchmark        avgt    5   156572,175
 PrimitivesPerformance.addNumbersObjectDoubleBenchmark     avgt    5  7625926,476 ±  660850,104  ns/op
 PrimitivesPerformance.addNumbersPrimitiveDoubleBenchmark  avgt    5  7339158,725 ± 3025501,172  ns/op
 ```
+
+#### 120. Comparing BigDecimals with Doubles
+```
+Benchmark                                            Mode  Cnt         Score         Error  Units
+BigDecimalPerformance.addNumbersBigDecimalBenchmark  avgt    5  21199383,498 ± 1912439,495  ns/op
+BigDecimalPerformance.addNumbersDoubleBenchmark      avgt    5    818097,284 ±   87883,840  ns/op
+```

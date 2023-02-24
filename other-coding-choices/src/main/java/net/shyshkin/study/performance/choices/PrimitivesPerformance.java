@@ -49,12 +49,12 @@ public class PrimitivesPerformance {
         return (result);
     }
 
-//    @Benchmark
+    @Benchmark
     public void addNumbersPrimitiveBenchmark() {
         long res = addNumbersPrimitive(10_000_000L);
     }
 
-//    @Benchmark
+    @Benchmark
     public void addNumbersObjectBenchmark() {
         Long res = addNumbersObject(10_000_000L);
     }
