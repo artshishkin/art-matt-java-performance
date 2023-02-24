@@ -37,3 +37,14 @@ LoopPerformance.calculateLengthParallelStreamBenchmark  avgt    5  13507189,140 
 LoopPerformance.calculateLengthStreamBenchmark          avgt    5  24736181,255 ± 4797374,660  ns/op
 LoopPerformance.calculateLengthStreamFlatMapBenchmark   avgt    5  21200496,122 ±  669926,495  ns/op
 ```
+
+#### 123. A note on logging
+
+```
+Benchmark                         Mode  Cnt         Score        Error  Units
+LoggingExample.logInfo            avgt    5  15908517,025 ± 519927,680  ns/op
+LoggingExample.logFine            avgt    5  15688670,979 ± 344322,847  ns/op
+LoggingExample.logFineParameters  avgt    5  15936486,680 ± 565550,551  ns/op
+LoggingExample.logFineIsLoggable  avgt    5         1,252 ±      0,292  ns/op
+LoggingExample.logFineLazy        avgt    5         1,132 ±      0,128  ns/op
+```
