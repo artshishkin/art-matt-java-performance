@@ -27,3 +27,13 @@ StringBuilderPerformance.generateNamesConcatOptimized  avgt    5   80,548 ± 0,4
 StringBuilderPerformance.generateNamesStringBuilder    avgt    5  129,135 ± 0,368  ns/op
 StringBuilderPerformance.generateNamesStringJoiner     avgt    5  103,091 ± 0,493  ns/op
 ```
+
+#### 122. Comparing loops and streams
+
+```
+Benchmark                                               Mode  Cnt         Score         Error  Units
+LoopPerformance.calculateLengthLoopBenchmark            avgt    5  27076425,009 ± 5430873,452  ns/op
+LoopPerformance.calculateLengthParallelStreamBenchmark  avgt    5  13507189,140 ± 2324580,298  ns/op
+LoopPerformance.calculateLengthStreamBenchmark          avgt    5  24736181,255 ± 4797374,660  ns/op
+LoopPerformance.calculateLengthStreamFlatMapBenchmark   avgt    5  21200496,122 ±  669926,495  ns/op
+```
