@@ -15,3 +15,8 @@
     - `The largest prime was 999962641`
     - `time taken : 6955  ms.`
 
+#### 131. Looking at bytecode with javap
+
+- `javap -v Simple.class`
+  - `v` - verbose
+- `javap -v Mathematics.class`
