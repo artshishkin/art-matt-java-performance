@@ -88,5 +88,23 @@ Interning - putting String into the String Pool in Heap
 2. Xms
    - `-Xms128m` - `-XX:InitialHeapSize=128m`
 
+#### Heap Space view
+
+- `java -XX:+PrintFlagsFinal | grep MaxHeapSize`
+
+Ubuntu and RedHat:
+- `java -XX:+PrintFlagsFinal -version | grep -iE 'HeapSize|PermSize|ThreadStackSize'`
+For Windows:
+- `java -XX:+PrintFlagsFinal -version | findstr /i "HeapSize PermSize ThreadStackSize"`
+For Mac
+- `java -XX:+PrintFlagsFinal -version | grep -iE 'heapsize|permsize|threadstacksize'`
+
+#### Heap Space of running application
+
+- `jps`
+- `jstat -gc [insert-pid-here]`
+- `jstat -gc 20708`
+- `jstat -gccapacity [insert-pid-here]` will present information about memory pool generation and space capabilities.
+- `jstat -gcutil [insert-pid-here]` will present the utilization of each generation as a percentage of its capacity. Useful to get an at a glance view of usage.
 
    
